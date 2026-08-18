@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PIB Estadual | PIB do Pará</title>
+  <meta name="description" content="PIB estadual do Pará com PDFs e dashboards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="../css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" id="navbar">
+    <a href="https://www.fapespa.pa.gov.br/" target="_blank" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+      <img src="../img/fapespa2.png" alt="FAPESPA - Fundação Amazônia de Amparo a Estudos e Pesquisas" class="navbar-logo" data-i18n-alt="nav_fapespa">
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Alternar navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ms-auto p-4 p-lg-0">
+        <li class="nav-item"><a class="nav-link" href="../index.html" data-i18n="menu_home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        <li class="nav-item dropdown d-none">
+          <button class="nav-link dropdown-toggle bg-transparent border-0" id="langDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            🌐 <span data-i18n="menu_idioma">Idioma</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item lang-option" data-lang="pt" href="#">Português</a></li>
+            <li><a class="dropdown-item lang-option" data-lang="en" href="#">English</a></li>
+            <li><a class="dropdown-item lang-option" data-lang="es" href="#">Español</a></li>
+          </ul>
+        </li>
+        <li class="nav-item position-relative">
+          <button id="acess-open-btn" class="nav-link border-0 bg-transparent" title="Acessibilidade" onclick="toggleAccessibilityMenu(event);" type="button">
+            ♿ <span class="d-none d-lg-inline">Acessibilidade</span>
+          </button>
+          <div id="acessibilidadeMenu" class="acess-dropdown" style="display:none;">
+            <div class="acess-section-title">Visão</div>
+            <div class="acess-row">
+              <button id="acess-contrast" class="acess-control" type="button">Alto contraste</button>
+              <button id="acess-night" class="acess-control" type="button">Modo noturno</button>
+            </div>
+            <div class="acess-section-title">Cores</div>
+            <div class="acess-row">
+              <button id="acess-grayscale" class="acess-control" type="button">Escala em Cinza</button>
+            </div>
+            <div class="acess-section-title">Tamanho da Fonte</div>
+            <div class="acess-row">
+              <button id="font-dec" class="acess-control" type="button">A-</button>
+              <button id="font-reset" class="acess-control" type="button">A</button>
+              <button id="font-inc" class="acess-control" type="button">A+</button>
+            </div>
+            <div class="acess-section-title">Daltonismo</div>
+            <div class="acess-row">
+              <button id="dalton-prot" class="acess-control" type="button">Protanopia</button>
+              <button id="dalton-deut" class="acess-control" type="button">Deuteranopia</button>
+              <button id="dalton-trit" class="acess-control" type="button">Tritanopia</button>
+              <button id="dalton-off" class="acess-control" type="button">Normal</button>
+            </div>
+            <div class="acess-section-title">Leitura &amp; Legibilidade</div>
+            <div class="acess-row">
+              <button id="acess-dislexia" class="acess-control" type="button">Modo Dislexia</button>
+              <button id="acess-reading" class="acess-control" type="button">Modo Leitura</button>
+              <button id="acess-links" class="acess-control" type="button">Destacar Links</button>
+            </div>
+            <div class="acess-section-title">Movimento</div>
+            <div class="acess-row">
+              <button id="reduce-motion" class="acess-control" type="button">Reduzir Animações</button>
+            </div>
+            <div class="acess-section-title">Geral</div>
+            <div class="acess-row">
+              <button id="acess-reset" class="acess-control acess-reset" type="button">Restaurar Tudo</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Main Content Section -->
+    <section class="pib-estadual-content-section">
+      <div class="container-fluid">
+        <div class="row g-3 h-100">
+          <!-- Dashboard Column -->
+          <div class="col-12 col-xl-9">
+            <!-- Dashboard Card -->
+            <div class="pib-estadual-dashboard-card">
+              <div class="pib-estadual-dashboard-header pib-estadual-dashboard-header-centered">
+                <div class="pib-estadual-dashboard-title-group">
+                  <h1 class="pib-estadual-dashboard-title-main">PIB Estadual do Pará</h1>
+                  <p class="pib-estadual-dashboard-subtitle-main">Acompanhe a evolução econômica do estado através de dashboard interativo e relatórios técnicos especializados</p>
+                </div>
+              </div>
+              <div class="pib-estadual-dashboard-body">
+                <iframe 
+                  class="pib-estadual-iframe" 
+                  title="Dashboard Sistema de Contas Regionais" 
+                  loading="lazy" 
+                  src="https://app.powerbi.com/view?r=eyJrIjoiNDRkYjRmMzEtMDFiMS00YjlmLTkwOGUtY2M1OTRlMDFhMWQ1IiwidCI6IjAzMzJhOGEyLWUzODMtNDYwYi1hMjhkLTUyYTM0Mjg4YTRhZCJ9" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar Column -->
+          <div class="col-12 col-xl-3">
+            <div class="pib-estadual-sidebar">
+              <!-- Reports Card -->
+              <div class="pib-estadual-reports-card">
+                <div class="pib-estadual-reports-header">
+                  <i class="bi bi-file-earmark-pdf"></i>
+                  <h3>Relatórios</h3>
+                </div>
+                <div class="pib-estadual-reports-body">
+                  <label for="pibEstadualSelect" class="pib-estadual-select-label">Selecione o Ano</label>
+                  <select id="pibEstadualSelect" class="pib-estadual-modern-select" data-pdf-select data-pdf-link="#pibEstadualFull" data-pdf-base="./">
+                    <option value="Relatório PIB do Pará 2017.pdf">📊 2017</option>
+                    <option value="Relatório PIB do Pará 2018.pdf">📊 2018</option>
+                    <option value="Relatório PIB do Pará 2019.pdf">📊 2019</option>
+                    <option value="Relatório PIB do Pará 2020.pdf">📊 2020</option>
+                    <option value="Relatorio PIB do Pará 2021.pdf">📊 2021</option>
+                    <option value="Relatorio PIB Pará 2022.pdf">📊 2022</option>
+                    <option value="Relatorio PIB Pará 2023.pdf" selected>📊 2023</option>
+                  </select>
+                  <div class="pib-estadual-info-tip">
+                    <i class="bi bi-info-circle"></i>
+                    <span>Documento técnico completo com análise econômica especializada</span>
+                  </div>
+                  <a id="pibEstadualFull" data-pdf-download class="pib-estadual-download-btn" href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-download"></i> Abrir Relatório
+                  </a>
+                </div>
+              </div>
+              <div class="descricao-pib">
+    <p>
+        O PIB Regional apresenta, anualmente, os resultados das Contas Regionais do Pará,
+        produzidos em parceria com o IBGE, permitindo a comparação do desempenho econômico
+        estadual com as demais Unidades da Federação. O indicador é calculado pela ótica da
+        produção, levando em consideração o valor adicionado acrescido dos impostos líquidos
+        de subsídios sobre produtos, refletindo a geração de riqueza da economia paraense.
+    </p>
+</div>
+              <!-- Info Card -->
+              <div class="pib-estadual-info-card">
+                <h4 class="pib-estadual-info-title">Sobre os Dados</h4>
+                <ul class="pib-estadual-info-list">
+                  <li>
+                    <i class="bi bi-check-circle"></i>
+                    <span>Fonte: Sistema de Contas Regionais (IBGE)</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle"></i>
+                    <span>Períodos anuais consolidados</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle"></i>
+                    <span>Dashboard atualizado regularmente</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer-main" id="contato">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <h5 class="mb-3">Sobre FAPESPA</h5>
+          <p class="small">Fundação Amazônia de Amparo a Estudos e Pesquisas, promovendo ciência, tecnologia e inovação para o desenvolvimento do estado.</p>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="mb-3">Contato</h5>
+          <ul class="list-clean small">
+            <li class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i>Av. Presidente Vargas, 670</li>
+            <li class="mb-2"><i class="bi bi-telephone me-2 text-primary"></i>+55 (91) 3323-2550</li>
+            <li class="mb-3"><i class="bi bi-envelope me-2 text-primary"></i><a href="mailto:contato@fapespa.pa.gov.br">contato@fapespa.pa.gov.br</a></li>
+          </ul>
+          <div class="d-flex gap-2">
+            <a href="https://www.instagram.com/fapespa/" target="_blank" rel="noopener noreferrer" class="text-light text-decoration-none" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/FapespaPA" target="_blank" rel="noopener noreferrer" class="text-light text-decoration-none" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com/fapespa" target="_blank" rel="noopener noreferrer" class="text-light text-decoration-none" title="Twitter" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="mb-3">Produtos</h5>
+          <ul class="list-clean small">
+            <li class="mb-2"><a href="../pib-estadual/index.html">Relatório Estadual PIB-PA</a></li>
+            <li class="mb-2"><a href="../pib-trimestral/index.html">PIB Trimestral do Estado do Pará</a></li>
+            <li class="mb-2"><a href="../pib-municipal/index.html">Relatório Municipal PIB-PA</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="footer-copyright text-center py-3">
+    <div class="container">
+      <small>© <span data-current-year></span> PIB do Pará | FAPESPA</small>
+    </div>
+  </div>
+
+  <button id="btnTop" title="Voltar ao topo" aria-label="Voltar ao topo" type="button">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
