@@ -1712,3 +1712,91 @@ body.acess-reduce-motion * {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* ========================================
+   PÁGINAS DE PRODUTO — IDENTIDADE DO PORTAL
+   ======================================== */
+.product-page {
+  min-height: 100%;
+}
+
+.product-page .pib-municipal-content-section {
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+  background: linear-gradient(180deg, #fff 0%, #eef5f1 100%);
+}
+
+.product-page .pib-municipal-content-section > .container {
+  width: min(calc(100% - 2rem), 1520px);
+  max-width: none;
+}
+
+.product-page-heading { max-width: 780px; margin: 0 auto clamp(2rem, 4vw, 3rem); text-align: center; }
+.product-page-heading h1 { margin-bottom: 0.75rem; font-size: clamp(2rem, 4vw, 3rem); color: var(--ink); }
+.product-page-heading p { margin: 0; color: var(--muted); font-size: 1.05rem; }
+.product-page .pib-municipal-dashboard-card,
+.product-page .pib-municipal-reports-card,
+.product-page .pib-municipal-info-card,
+.product-page .descricao-pib {
+  border: 1px solid #dce8e2;
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 0 12px 36px rgba(17, 65, 50, 0.08);
+}
+.product-page .pib-municipal-dashboard-card:hover { box-shadow: 0 16px 42px rgba(17, 65, 50, 0.12); }
+.product-page .pib-municipal-dashboard-header,
+.product-page .pib-municipal-reports-header {
+  background: linear-gradient(120deg, var(--primary-dark), var(--primary));
+}
+.product-page .pib-municipal-dashboard-header-centered { padding: 1.6rem 2rem; text-align: left; }
+.product-page .pib-municipal-dashboard-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.5rem;
+  color: #f2ca5b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.product-page .pib-municipal-dashboard-title-main { font-size: clamp(1.35rem, 2vw, 1.75rem); font-weight: 700; }
+.product-page .pib-municipal-dashboard-subtitle-main { max-width: none; margin: 0; font-size: 0.9rem; }
+.product-page .pib-municipal-iframe { min-height: 720px; }
+.product-page .pib-municipal-sidebar { gap: 1.25rem; }
+.product-page .pib-municipal-reports-header { padding: 1.25rem; }
+.product-page .pib-municipal-reports-header i { color: #f2ca5b; }
+.product-page .pib-municipal-reports-body { padding: 1.35rem; }
+.product-page .pib-municipal-select-label { color: var(--ink); }
+.product-page .pib-municipal-modern-select { border: 1px solid #bdd4c9; color: var(--ink); }
+.product-page .pib-municipal-modern-select:hover,
+.product-page .pib-municipal-modern-select:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(18, 99, 71, 0.12); }
+.product-page .pib-municipal-info-tip { border-left-color: var(--primary); background: var(--surface-soft); color: #405b52; }
+.product-page .pib-municipal-info-tip i { color: var(--primary); }
+.product-page .pib-municipal-download-btn { background: var(--primary); box-shadow: 0 8px 20px rgba(9, 71, 53, 0.2); }
+.product-page .pib-municipal-download-btn:hover { background: var(--primary-dark); box-shadow: 0 10px 24px rgba(9, 71, 53, 0.28); }
+.product-page .descricao-pib { display: flex; gap: 0.9rem; padding: 1.25rem; color: #405b52; }
+.product-page .descricao-pib > i { flex: 0 0 auto; color: var(--accent); font-size: 1.35rem; }
+.product-page .descricao-pib p { text-align: left; line-height: 1.7; }
+.product-page .pib-municipal-panel-card:hover,
+.product-page .pib-municipal-panel-card:focus-visible { border-color: var(--primary); box-shadow: 0 14px 34px rgba(17, 65, 50, 0.13); }
+.product-page .pib-municipal-info-title { color: var(--ink); }
+.product-page .pib-municipal-info-title i,
+.product-page .pib-municipal-panel-action { color: var(--primary); }
+@media (max-width: 1199.98px) {
+  .product-page .pib-municipal-sidebar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .product-page .descricao-pib { grid-column: 1 / -1; }
+}
+@media (max-width: 991.98px) {
+  .product-page .pib-municipal-iframe { min-height: 620px; }
+}
+@media (max-width: 767.98px) {
+  .product-page .pib-municipal-content-section { padding: 2.5rem 0; }
+  .product-page .product-page-heading { padding: 0 0.25rem; }
+  .product-page-heading p { font-size: 0.95rem; }
+  .product-page .pib-municipal-sidebar { display: flex; }
+  .product-page .pib-municipal-dashboard-header-centered { padding: 1.25rem; }
+  .product-page .pib-municipal-iframe { min-height: 500px; }
+}
+@media (max-width: 575.98px) {
+  .product-page .pib-municipal-iframe { min-height: 420px; }
+}
