@@ -1412,6 +1412,7 @@ body.acess-reduce-motion * {
   max-width: 1080px;
   margin-right: auto;
   margin-left: auto;
+  text-align: justify;
 }
 
 .home-page .apresentacao-modal-content {
@@ -1491,6 +1492,7 @@ body.acess-reduce-motion * {
   color: #405b52;
   font-size: 0.98rem;
   line-height: 1.75;
+  text-align: justify;
 }
 
 .home-page .apresentacao-modal-body::-webkit-scrollbar {
@@ -1530,12 +1532,14 @@ body.acess-reduce-motion * {
   border-left: 4px solid var(--primary);
   border-radius: 12px;
   background: var(--surface-soft);
+  text-align: justify;
 }
 
 .home-page .apresentacao-organization p {
   margin-bottom: 0.75rem;
   color: var(--ink);
   font-weight: 600;
+  text-align: justify;
 }
 
 .home-page .apresentacao-organization ul {
