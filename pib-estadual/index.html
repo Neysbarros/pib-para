@@ -12,9 +12,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="../css/style.css" rel="stylesheet" />
 </head>
-<body>
+<body class="home-page product-page trimestral-page">
   <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" id="navbar">
-    <a href="https://www.fapespa.pa.gov.br/" target="_blank" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <a href="https://www.fapespa.pa.gov.br/" target="_blank" rel="noopener noreferrer" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
       <img src="../img/fapespa2.png" alt="FAPESPA - Fundação Amazônia de Amparo a Estudos e Pesquisas" class="navbar-logo" data-i18n-alt="nav_fapespa">
     </a>
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Alternar navegação">
@@ -82,26 +82,30 @@
   </nav>
 
   <main>
-    <!-- Main Content Section -->
-    <section class="pib-estadual-content-section">
-      <div class="container-fluid">
-        <div class="row g-3 h-100">
+    <section class="pib-municipal-content-section">
+      <div class="container">
+        <div class="product-page-heading">
+          <span class="section-eyebrow">Economia paraense</span>
+          <h1>PIB Estadual do Pará</h1>
+          <p>Acompanhe a evolução econômica do estado por meio do painel interativo e de relatórios técnicos especializados.</p>
+        </div>
+        <div class="row g-4 align-items-start">
           <!-- Dashboard Column -->
           <div class="col-12 col-xl-9">
-            <!-- Dashboard Card -->
-            <div class="pib-estadual-dashboard-card">
-              <div class="pib-estadual-dashboard-header pib-estadual-dashboard-header-centered">
-                <div class="pib-estadual-dashboard-title-group">
-                  <h1 class="pib-estadual-dashboard-title-main">PIB Estadual do Pará</h1>
-                  <p class="pib-estadual-dashboard-subtitle-main">Acompanhe a evolução econômica do estado através de dashboard interativo e relatórios técnicos especializados</p>
+            <div class="pib-municipal-dashboard-card">
+              <div class="pib-municipal-dashboard-header pib-municipal-dashboard-header-centered">
+                <div class="pib-municipal-dashboard-title-group">
+                  <span class="pib-municipal-dashboard-kicker"><i class="bi bi-graph-up-arrow"></i> Painel interativo</span>
+                  <h2 class="pib-municipal-dashboard-title-main">Indicadores do PIB Estadual</h2>
+                  <p class="pib-municipal-dashboard-subtitle-main">Explore os dados e acompanhe a evolução econômica anual do Pará.</p>
                 </div>
               </div>
-              <div class="pib-estadual-dashboard-body">
-                <iframe 
-                  class="pib-estadual-iframe" 
-                  title="Dashboard Sistema de Contas Regionais" 
-                  loading="lazy" 
-                  src="https://app.powerbi.com/view?r=eyJrIjoiNDRkYjRmMzEtMDFiMS00YjlmLTkwOGUtY2M1OTRlMDFhMWQ1IiwidCI6IjAzMzJhOGEyLWUzODMtNDYwYi1hMjhkLTUyYTM0Mjg4YTRhZCJ9" 
+              <div class="pib-municipal-dashboard-body">
+                <iframe
+                  class="pib-municipal-iframe"
+                  title="Dashboard Sistema de Contas Regionais"
+                  loading="lazy"
+                  src="https://app.powerbi.com/view?r=eyJrIjoiNDRkYjRmMzEtMDFiMS00YjlmLTkwOGUtY2M1OTRlMDFhMWQ1IiwidCI6IjAzMzJhOGEyLWUzODMtNDYwYi1hMjhkLTUyYTM0Mjg4YTRhZCJ9"
                   allowfullscreen>
                 </iframe>
               </div>
@@ -110,16 +114,15 @@
 
           <!-- Sidebar Column -->
           <div class="col-12 col-xl-3">
-            <div class="pib-estadual-sidebar">
-              <!-- Reports Card -->
-              <div class="pib-estadual-reports-card">
-                <div class="pib-estadual-reports-header">
+            <div class="pib-municipal-sidebar">
+              <div class="pib-municipal-reports-card">
+                <div class="pib-municipal-reports-header">
                   <i class="bi bi-file-earmark-pdf"></i>
                   <h3>Relatórios</h3>
                 </div>
-                <div class="pib-estadual-reports-body">
-                  <label for="pibEstadualSelect" class="pib-estadual-select-label">Selecione o Ano</label>
-                  <select id="pibEstadualSelect" class="pib-estadual-modern-select" data-pdf-select data-pdf-link="#pibEstadualFull" data-pdf-base="./">
+                <div class="pib-municipal-reports-body">
+                  <label for="pibEstadualSelect" class="pib-municipal-select-label">Selecione o Ano</label>
+                  <select id="pibEstadualSelect" class="pib-municipal-modern-select" data-pdf-select data-pdf-link="#pibEstadualFull" data-pdf-base="./">
                     <option value="Relatório PIB do Pará 2017.pdf">📊 2017</option>
                     <option value="Relatório PIB do Pará 2018.pdf">📊 2018</option>
                     <option value="Relatório PIB do Pará 2019.pdf">📊 2019</option>
@@ -128,28 +131,22 @@
                     <option value="Relatorio PIB Pará 2022.pdf">📊 2022</option>
                     <option value="Relatorio PIB Pará 2023.pdf" selected>📊 2023</option>
                   </select>
-                  <div class="pib-estadual-info-tip">
+                  <div class="pib-municipal-info-tip">
                     <i class="bi bi-info-circle"></i>
                     <span>Documento técnico completo com análise econômica especializada</span>
                   </div>
-                  <a id="pibEstadualFull" data-pdf-download class="pib-estadual-download-btn" href="#" target="_blank" rel="noopener noreferrer">
+                  <a id="pibEstadualFull" data-pdf-download class="pib-municipal-download-btn" href="#" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-download"></i> Abrir Relatório
                   </a>
                 </div>
               </div>
               <div class="descricao-pib">
-    <p>
-        O PIB Regional apresenta, anualmente, os resultados das Contas Regionais do Pará,
-        produzidos em parceria com o IBGE, permitindo a comparação do desempenho econômico
-        estadual com as demais Unidades da Federação. O indicador é calculado pela ótica da
-        produção, levando em consideração o valor adicionado acrescido dos impostos líquidos
-        de subsídios sobre produtos, refletindo a geração de riqueza da economia paraense.
-    </p>
-</div>
-              <!-- Info Card -->
-              <div class="pib-estadual-info-card">
-                <h4 class="pib-estadual-info-title">Sobre os Dados</h4>
-                <ul class="pib-estadual-info-list">
+                <i class="bi bi-lightbulb" aria-hidden="true"></i>
+                <p>O PIB Regional apresenta, anualmente, os resultados das Contas Regionais do Pará, produzidos em parceria com o IBGE, permitindo a comparação do desempenho econômico estadual com as demais Unidades da Federação. O indicador é calculado pela ótica da produção, levando em consideração o valor adicionado acrescido dos impostos líquidos de subsídios sobre produtos, refletindo a geração de riqueza da economia paraense.</p>
+              </div>
+              <div class="pib-municipal-info-card">
+                <h4 class="pib-municipal-info-title"><i class="bi bi-database-check"></i> Sobre os Dados</h4>
+                <ul class="pib-municipal-info-list">
                   <li>
                     <i class="bi bi-check-circle"></i>
                     <span>Fonte: Sistema de Contas Regionais (IBGE)</span>
@@ -175,29 +172,29 @@
   <footer class="footer-main" id="contato">
     <div class="container py-5">
       <div class="row g-5">
-        <div class="col-lg-4">
-          <h5 class="mb-3">Sobre FAPESPA</h5>
-          <p class="small">Fundação Amazônia de Amparo a Estudos e Pesquisas, promovendo ciência, tecnologia e inovação para o desenvolvimento do estado.</p>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-title mb-4">Sobre FAPESPA</h5>
+          <p class="small text-light">Fundação Amazônia de Amparo a Estudos e Pesquisas, promovendo ciência, tecnologia e inovação para o desenvolvimento do estado.</p>
         </div>
-        <div class="col-lg-4">
-          <h5 class="mb-3">Contato</h5>
-          <ul class="list-clean small">
-            <li class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i>Av. Presidente Vargas, 670</li>
-            <li class="mb-2"><i class="bi bi-telephone me-2 text-primary"></i>+55 (91) 3323-2550</li>
-            <li class="mb-3"><i class="bi bi-envelope me-2 text-primary"></i><a href="mailto:contato@fapespa.pa.gov.br">contato@fapespa.pa.gov.br</a></li>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-title mb-4">Contato</h5>
+          <ul class="list-unstyled small text-light">
+            <li class="mb-2"><i class="bi bi-geo-alt me-2 text-white"></i>Av. Presidente Vargas, 670</li>
+            <li class="mb-2"><i class="bi bi-telephone me-2 text-white"></i>+55 (91) 3323-2550</li>
+            <li class="mb-3"><i class="bi bi-envelope me-2 text-white"></i><a class="text-light text-decoration-none" href="mailto:contato@fapespa.pa.gov.br">contato@fapespa.pa.gov.br</a></li>
           </ul>
-          <div class="d-flex gap-2">
-            <a href="https://www.instagram.com/fapespa/" target="_blank" rel="noopener noreferrer" class="text-light text-decoration-none" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.facebook.com/FapespaPA" target="_blank" rel="noopener noreferrer" class="text-light text-decoration-none" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://x.com/fapespa" target="_blank" rel="noopener noreferrer" class="text-light text-decoration-none" title="Twitter" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+          <div class="social-icons mt-4">
+            <a href="https://www.instagram.com/fapespa/" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/FapespaPA" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com/fapespa" target="_blank" rel="noopener noreferrer" class="social-link" title="Twitter" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
           </div>
         </div>
-        <div class="col-lg-4">
-          <h5 class="mb-3">Produtos</h5>
-          <ul class="list-clean small">
-            <li class="mb-2"><a href="../pib-estadual/index.html">Relatório Estadual PIB-PA</a></li>
-            <li class="mb-2"><a href="../pib-trimestral/index.html">PIB Trimestral do Estado do Pará</a></li>
-            <li class="mb-2"><a href="../pib-municipal/index.html">Relatório Municipal PIB-PA</a></li>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-title mb-4">Produtos</h5>
+          <ul class="list-unstyled small text-light">
+            <li class="mb-2"><a class="text-light text-decoration-none" href="../pib-estadual/index.html">Relatório Estadual PIB-PA</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="../pib-trimestral/index.html">PIB Trimestral do Estado do Pará</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="../pib-municipal/index.html">Relatório Municipal PIB-PA</a></li>
           </ul>
         </div>
       </div>
