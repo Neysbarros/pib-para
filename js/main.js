@@ -92,7 +92,56 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   initAccessibility();
+  initContactForm();
 });
+
+function initContactForm() {
+  const form = document.getElementById("contatoForm");
+  const feedback = document.getElementById("contatoFeedback");
+  if (!form || !feedback) {
+    return;
+  }
+
+  const submitButton = form.querySelector('button[type="submit"]');
+  const submitLabel = form.querySelector(".contact-submit-label");
+  const submitLoading = form.querySelector(".contact-submit-loading");
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) {
+      return;
+    }
+
+    feedback.className = "alert d-none";
+    submitButton.disabled = true;
+    submitLabel.classList.add("d-none");
+    submitLoading.classList.remove("d-none");
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Não foi possível enviar a mensagem.");
+      }
+
+      form.reset();
+      feedback.textContent = result.message;
+      feedback.className = "alert alert-success";
+    } catch (error) {
+      feedback.textContent = error.message || "Não foi possível enviar a mensagem. Tente novamente.";
+      feedback.className = "alert alert-danger";
+    } finally {
+      submitButton.disabled = false;
+      submitLabel.classList.remove("d-none");
+      submitLoading.classList.add("d-none");
+      feedback.focus();
+    }
+  });
+}
 
 function toggleAccessibilityMenu(event) {
   event.stopPropagation();
