@@ -561,6 +561,23 @@
         </div>
       </div>
     </section>
+
+    <!-- ========================================
+         SEÇÃO: DÚVIDAS E SUGESTÕES
+         ======================================== -->
+    <section class="contact-section" id="duvidas-sugestoes">
+      <div class="container">
+        <div class="contact-card text-center">
+          <span class="product-icon mx-auto" aria-hidden="true"><i class="bi bi-chat-dots"></i></span>
+          <h2 class="section-title">Dúvidas e Sugestões</h2>
+          <p>Tem alguma dúvida ou ideia para melhorar o portal? Envie uma mensagem para a nossa equipe.</p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#contatoModal">
+            <i class="bi bi-send me-2"></i>Enviar dúvida ou sugestão
+          </button>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ========================================
@@ -718,6 +735,62 @@
       </div>
     </div>
   </div>
+  
+  <!-- ========================================
+       MODAL: DÚVIDAS E SUGESTÕES
+       ======================================== -->
+  <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content contact-modal-content">
+        <div class="modal-header apresentacao-modal-header border-0">
+          <div class="apresentacao-modal-heading">
+            <h2 class="modal-title h4 mb-1" id="contatoModalLabel">Dúvidas e Sugestões</h2>
+            <p class="apresentacao-modal-subtitle mb-0">Preencha os campos abaixo para falar com a nossa equipe</p>
+          </div>
+          <button type="button" class="btn-close apresentacao-modal-close" data-bs-dismiss="modal"
+            aria-label="Fechar"></button>
+        </div>
+        <form id="contatoForm" action="enviar-contato.php" method="post">
+          <div class="modal-body contact-modal-body">
+            <div id="contatoFeedback" class="alert d-none" role="alert" aria-live="polite" tabindex="-1"></div>
+            <div class="contact-honeypot" aria-hidden="true">
+              <label for="website">Não preencha este campo</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="nome">Nome <span aria-hidden="true">*</span></label>
+                <input class="form-control" id="nome" name="nome" type="text" maxlength="120" autocomplete="name"
+                  required />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="email">E-mail <span aria-hidden="true">*</span></label>
+                <input class="form-control" id="email" name="email" type="email" maxlength="160" autocomplete="email"
+                  required />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="assunto">Assunto <span aria-hidden="true">*</span></label>
+                <input class="form-control" id="assunto" name="assunto" type="text" maxlength="160" required />
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="mensagem">Mensagem <span aria-hidden="true">*</span></label>
+                <textarea class="form-control" id="mensagem" name="mensagem" rows="5" maxlength="5000"
+                  required></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" type="submit">
+              <span class="contact-submit-label"><i class="bi bi-send me-2"></i>Enviar</span>
+              <span class="contact-submit-loading d-none"><span class="spinner-border spinner-border-sm me-2"
+                  aria-hidden="true"></span>Enviando...</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
 
   <!-- ========================================
        RODAPÉ PRINCIPAL (FOOTER)
