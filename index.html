@@ -750,13 +750,15 @@
           <button type="button" class="btn-close apresentacao-modal-close" data-bs-dismiss="modal"
             aria-label="Fechar"></button>
         </div>
-        <form id="contatoForm" action="enviar-contato.php" method="post">
+        <form id="contatoForm" action="https://formsubmit.co/ajax/waldiney.barros@fapespa.pa.gov.br" method="post">
           <div class="modal-body contact-modal-body">
             <div id="contatoFeedback" class="alert d-none" role="alert" aria-live="polite" tabindex="-1"></div>
             <div class="contact-honeypot" aria-hidden="true">
-              <label for="website">Não preencha este campo</label>
-              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+              <label for="contactHoney">Não preencha este campo</label>
+              <input id="contactHoney" name="_honey" type="text" tabindex="-1" autocomplete="off" />
             </div>
+            <input name="_subject" type="hidden" value="Nova mensagem — Portal PIB do Pará" />
+            <input name="_template" type="hidden" value="table" />
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label" for="nome">Nome <span aria-hidden="true">*</span></label>
