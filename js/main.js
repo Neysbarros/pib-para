@@ -118,18 +118,14 @@ function initContactForm() {
     submitLoading.classList.remove("d-none");
 
     try {
-      const response = await fetch(form.action, {
+      await fetch(form.action, {
         method: "POST",
         body: new FormData(form),
-        headers: { Accept: "application/json" },
+        mode: "no-cors",
       });
-      const result = await response.json();
-      if (!response.ok || !result.success) {
-        throw new Error(result.message || "Não foi possível enviar a mensagem.");
-      }
 
       form.reset();
-      feedback.textContent = result.message;
+      feedback.textContent = "Mensagem enviada! Se este for o primeiro envio, confirme a ativação no e-mail da equipe.";
       feedback.className = "alert alert-success";
     } catch (error) {
       feedback.textContent = error.message || "Não foi possível enviar a mensagem. Tente novamente.";
