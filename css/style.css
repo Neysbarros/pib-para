@@ -2039,3 +2039,66 @@ body.acess-reduce-motion * {
     padding: 1.25rem !important;
   }
 }
+/* Página de notícias */
+.news-page .pib-municipal-content-section > .container {
+  max-width: 1200px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.news-card {
+  display: flex;
+  min-width: 0;
+  min-height: 230px;
+  flex-direction: column;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  border: 1px solid #dce8e2;
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 0 12px 36px rgba(17, 65, 50, 0.08);
+}
+
+.news-card h2 {
+  margin: 0 0 1.5rem;
+  color: var(--ink);
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  line-height: 1.45;
+}
+
+.news-card a {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.45rem;
+  margin-top: auto;
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.news-card a:hover,
+.news-card a:focus-visible {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+@media (max-width: 991.98px) {
+  .news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .news-card {
+    min-height: 0;
+  }
+}
