@@ -4,7 +4,7 @@ declare(strict_types=1);
 header('Content-Type: application/json; charset=utf-8');
 
 // Altere estes endereços para definir quem recebe e quem aparece como remetente.
-const EMAIL_DESTINATARIO = 'waldiney.barros@fapespa.pa.gov.br';
+const EMAIL_DESTINATARIO = 'detgi@fapespa.pa.gov.br';
 const EMAIL_REMETENTE = 'waldiney.barros@fapespa.pa.gov.br';
 
 function respond(int $status, bool $success, string $message): never
