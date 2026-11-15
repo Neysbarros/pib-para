@@ -1,0 +1,42 @@
+/* Estilos exclusivos da página de equipe. */
+.equipe-page { --primary: #126347; --primary-dark: #094735; --ink: #17332b; background: #f8faf9; color: var(--ink); }
+.equipe-page h1, .equipe-page h2, .equipe-page h3 { font-family: "Jost", sans-serif; }
+.equipe-header { background: #fff; border-bottom: 1px solid #dce8e2; }
+.equipe-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 22px; padding-bottom: 22px; }
+.equipe-header img { display: block; max-height: 64px; width: auto; }
+.equipe-back { display: inline-flex; align-items: center; gap: 10px; color: var(--primary); text-decoration: none; font-size: .9rem; font-weight: 600; }
+.equipe-back:hover { text-decoration: underline; }
+.equipe-page a:focus-visible { outline: 3px solid #27996f; outline-offset: 5px; }
+.equipe-hero { padding: 76px 0 72px; background: radial-gradient(ellipse at 95% 10%, var(--primary), transparent 65%), var(--primary-dark); color: #fff; }
+.equipe-eyebrow { display: block; font-size: .72rem; font-weight: 600; letter-spacing: .13em; line-height: 1.7; }
+.equipe-hero .equipe-eyebrow { color: #bdd4c9; margin-bottom: 24px; }
+.equipe-hero h1 { font-size: clamp(2.2rem, 4.6vw, 4rem); line-height: 1.12; letter-spacing: -.035em; max-width: 850px; margin-bottom: 24px; }
+.equipe-intro { max-width: 590px; color: #d9e6df; line-height: 1.8; }
+.equipe-hero-link { display: inline-flex; gap: 24px; align-items: center; margin-top: 18px; color: #fff; text-underline-offset: 6px; }
+.equipe-hero-link:hover { color: #f2ca5b; }
+.equipe-content { padding-top: 60px; padding-bottom: 72px; }
+.equipe-section { margin-bottom: 56px; scroll-margin-top: 30px; }
+.equipe-section-heading { margin-bottom: 25px; }
+.equipe-content .equipe-eyebrow { color: #426156; margin-bottom: 8px; }
+.equipe-page h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); letter-spacing: -.025em; margin: 0; }
+.equipe-leadership { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.equipe-card { border: 1px solid #dce8e2; border-radius: 16px; padding: 28px; background: #fff; box-shadow: 0 6px 22px #11413204; }
+.equipe-card-label { display: block; font-size: .78rem; font-weight: 600; color: #426156; margin-bottom: 26px; }
+.equipe-card h3 { font-size: 1.22rem; line-height: 1.4; margin-bottom: 8px; }
+.equipe-card p { color: #405b52; font-size: .9rem; line-height: 1.7; margin: 0; }
+.equipe-card .equipe-detail { font-size: .78rem; margin-top: 10px; }
+.equipe-card-divider { height: 1px; background: #e3ece7; margin: 24px 0; }
+.equipe-card-accent { background: #e7f3ed; border-color: #bdd4c9; }
+.equipe-card-icon { display: block; font-size: 2rem; color: var(--primary); margin-bottom: 22px; }
+.equipe-people { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.equipe-people li { display: flex; align-items: center; gap: 18px; padding: 20px 24px; background: #fff; border: 1px solid #dce8e2; border-radius: 12px; font-size: .95rem; font-weight: 600; }
+.equipe-avatar { flex: 0 0 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; background: #e7f3ed; color: var(--primary); font-family: "Jost", sans-serif; font-size: .9rem; }
+.equipe-development { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 32px 0; border-top: 1px solid #d9e6df; border-bottom: 1px solid #d9e6df; }
+.equipe-developer { display: flex; align-items: center; gap: 16px; font-size: .95rem; font-weight: 600; }
+.equipe-developer i { font-size: 1.8rem; color: var(--primary); }
+.equipe-photo { margin: 0; overflow: hidden; border-radius: 18px; background: #fff; border: 1px solid #dce8e2; }
+.equipe-photo img { display: block; width: 100%; height: auto; }
+.equipe-photo figcaption { padding: 24px 28px; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: .9rem; color: #405b52; }
+.equipe-photo figcaption .equipe-eyebrow { margin: 0; }
+@media (max-width: 991px) { .equipe-leadership { grid-template-columns: 1fr; } .equipe-development { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 575px) { .equipe-header-inner { gap: 16px; } .equipe-header img { max-width: 130px; } .equipe-back { font-size: .78rem; } .equipe-hero { padding: 48px 0; } .equipe-content { padding-top: 40px; padding-bottom: 40px; } .equipe-section { margin-bottom: 40px; } .equipe-people { grid-template-columns: 1fr; } .equipe-card { padding: 24px; } .equipe-people li { padding: 18px; } .equipe-photo figcaption { align-items: flex-start; flex-direction: column; padding: 20px; } }
