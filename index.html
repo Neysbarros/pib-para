@@ -548,16 +548,7 @@
               Pará.</p>
             <!-- mb-3: margin-bottom de 3 unidades -->
 
-            <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#equipeModal">
-              <!-- Botão que abre o modal de equipe
-                   - btn btn-primary: botão Bootstrap com cor primária (azul)
-                   - type="button": especifica que é um botão (não submit de formulário)
-                   - data-bs-toggle="modal": ativa funcionalidade de modal do Bootstrap
-                   - data-bs-target="#equipeModal": indica qual modal abrir (elemento com id equipeModal) -->
-
-              <i class="bi bi-people me-2"></i>Acessar
-              <!-- Ícone de pessoas + texto "Acessar" -->
-            </button>
+            <a class="btn btn-primary" href="expediente.html"><i class="bi bi-people me-2" aria-hidden="true"></i>Acessar</a>
           </div>
         </div>
       </div>
@@ -671,68 +662,6 @@
   </div>
   </div>
 
-  <!-- ========================================
-       MODAL: INFORMAÇÕES DA EQUIPE
-       ======================================== -->
-
-  <div class="modal fade" id="equipeModal" tabindex="-1" aria-labelledby="equipeModalLabel" aria-hidden="true">
-    <!-- Modal do Bootstrap (janela sobreposta que aparece quando o usuário clica em "Acessar" no botão Equipe)
-         - modal fade: componente modal com efeito de transição suave (fade in/out)
-         - id="equipeModal": identificador único usado pelo botão através do data-bs-target="#equipeModal"
-         - tabindex="-1": remove do fluxo de navegação por Tab (só acessível quando aberto)
-         - aria-labelledby="equipeModalLabel": acessibilidade - referencia título do modal para leitores de tela
-         - aria-hidden="true": indica que está oculto por padrão (melhora acessibilidade) -->
-
-    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <!-- Estrutura do diálogo do modal
-           - modal-dialog: container do modal com margens laterais
-           - modal-xl: tamanho extra-large (ocupa quase toda largura da tela em desktops)
-           - modal-dialog-centered: centraliza verticalmente na tela
-           - modal-dialog-scrollable: permite scroll interno quando conteúdo é maior que viewport -->
-
-      <div class="modal-content">
-        <!-- Container do conteúdo (header + body + footer) -->
-
-        <div class="modal-header border-0">
-          <!-- Cabeçalho do modal
-               - border-0: remove borda inferior do header (design mais clean) -->
-
-          <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Fechar"></button>
-          <!-- Botão X para fechar
-               - btn-close: estilo Bootstrap com ícone X
-               - ms-auto: margin-start automático (empurra o botão para direita)
-               - data-bs-dismiss="modal": comando Bootstrap que fecha o modal
-               - aria-label: descrição do botão para leitores de tela -->
-        </div>
-
-        <div class="modal-body p-0">
-          <!-- Corpo do modal onde fica o conteúdo principal
-               - p-0: padding zero (remove espaços internos, pois o iframe já tem seus próprios espaçamentos) -->
-
-          <iframe src="expediente.html" title="Equipe do PIB do Para"
-            style="width: 100%; min-height: 70vh; border: none;"></iframe>
-          <!-- Iframe (incorpora outra página HTML dentro desta)
-               - src="expediente.html": página externa com lista completa da equipe (direção, coordenação, técnicos, etc)
-               - title: descrição do conteúdo do iframe (acessibilidade)
-               - width 100%: largura total do container
-               - min-height 70vh: altura mínima de 70% da viewport height (altura da tela)
-               - border none: remove borda do iframe -->
-        </div>
-
-        <div class="modal-footer">
-          <!-- Rodapé do modal (área para botões de ação) -->
-
-          <a class="btn btn-outline-secondary" href="expediente.html" target="_blank" rel="noopener noreferrer">Abrir em
-            nova aba</a>
-          <!-- Link estilizado como botão que abre expediente.html em nova aba
-               - btn btn-outline-secondary: botão com borda cinza (secondary) sem preenchimento
-               - target="_blank": abre em nova aba
-               - rel="noopener noreferrer": segurança - impede que a nova página tenha acesso ao window.opener -->
-        </div>
-      </div>
-    </div>
-  </div>
-  
   <!-- ========================================
        MODAL: DÚVIDAS E SUGESTÕES
        ======================================== -->

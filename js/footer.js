@@ -38,7 +38,10 @@
             <li class="mb-2"><a class="text-light text-decoration-none" href="index.html">Página Inicial</a></li>
             <li class="mb-2"><a class="text-light text-decoration-none" href="pib-estadual/index.html">PIB Estadual</a></li>
             <li class="mb-2"><a class="text-light text-decoration-none" href="pib-municipal/index.html">PIB Municipal</a></li>
-            <li><a class="text-light text-decoration-none" href="pib-trimestral/index.html">PIB Trimestral</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="pib-trimestral/index.html">PIB Trimestral</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="https://www.fapespa.pa.gov.br/dashboard/" target="_blank" rel="noopener noreferrer">Painéis Estatísticos</a></li>
+            <li class="mb-2"><a class="text-light text-decoration-none" href="https://www.fapespa.pa.gov.br/wp-content/uploads/2026/03/Relatorio-Preliminar-Publicacao-Bioeconomia-Versao-Final.pdf" target="_blank" rel="noopener noreferrer">Bioeconomia (PDF)</a></li>
+            <li><a class="text-light text-decoration-none" href="https://www.fapespa.pa.gov.br/wp-content/uploads/2025/09/Nota_tecnica_MIP_final.pdf" target="_blank" rel="noopener noreferrer">Matriz de Insumo-Produto (PDF)</a></li>
           </ul>
         </div>
       </div>
